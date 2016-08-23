@@ -1,25 +1,113 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Counter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="8Lw-sv-zki">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8D-u6-Dzw" customClass="CounterButton" customModule="Counter" customModuleProvider="target">
+                                <rect key="frame" x="35" y="380" width="250" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="7jW-WZ-kSd"/>
+                                    <constraint firstAttribute="height" constant="48" id="S6o-eB-Z45"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
+                                <state key="normal" title="COUNT">
+                                    <color key="titleColor" red="0.20784313725490194" green="0.22745098039215686" blue="0.44705882352941173" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCoinTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9rV-Wb-lqS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd4-NU-D8A">
+                                <rect key="frame" x="-4" y="82" width="329" height="212"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="138" id="8zi-So-9El"/>
+                                    <constraint firstAttribute="width" constant="329" id="DTw-Xd-9O7"/>
+                                    <constraint firstAttribute="height" constant="212" id="koD-R0-PGq"/>
+                                    <constraint firstAttribute="width" constant="134" id="vf0-as-BOB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="121"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.1409931282722513" green="0.1409931282722513" blue="0.1409931282722513" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="8zi-So-9El"/>
+                                        <exclude reference="vf0-as-BOB"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1K9-4W-yny">
+                                <rect key="frame" x="137" y="436" width="46" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="gYs-4H-2vI"/>
+                                    <constraint firstAttribute="width" constant="46" id="ho2-2L-pLZ"/>
+                                    <constraint firstAttribute="height" constant="30" id="k6f-hT-5SO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="k6f-hT-5SO"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onResetTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M15-58-xxz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Hd4-NU-D8A" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Az-lO-wrJ"/>
+                            <constraint firstAttribute="trailing" secondItem="8Lw-sv-zki" secondAttribute="trailing" id="Cog-2F-NAO"/>
+                            <constraint firstItem="8Lw-sv-zki" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jvt-bn-dIE"/>
+                            <constraint firstItem="1K9-4W-yny" firstAttribute="top" secondItem="L8D-u6-Dzw" secondAttribute="bottom" constant="8" id="P3X-Cz-xrS"/>
+                            <constraint firstItem="8Lw-sv-zki" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="R1h-vd-Mj5"/>
+                            <constraint firstItem="1K9-4W-yny" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tpy-An-s6y"/>
+                            <constraint firstItem="Hd4-NU-D8A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="98" id="VSG-5E-ALP"/>
+                            <constraint firstItem="L8D-u6-Dzw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gpu-mD-roP"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="L8D-u6-Dzw" secondAttribute="bottom" constant="140" id="iWo-by-iru"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8Lw-sv-zki" secondAttribute="bottom" id="kcH-ve-F1R"/>
+                            <constraint firstItem="Hd4-NU-D8A" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="62" id="nNl-ai-XHH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="VSG-5E-ALP"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="countButton" destination="L8D-u6-Dzw" id="3zd-TC-BNS"/>
+                        <outlet property="numberLabel" destination="Hd4-NU-D8A" id="2QA-NX-XGh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="305"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg" width="375" height="667"/>
+    </resources>
 </document>
