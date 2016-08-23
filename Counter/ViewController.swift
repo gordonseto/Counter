@@ -26,6 +26,10 @@ class ViewController: UIViewController {
         count++
         numberLabel.text = "\(self.count)"
         animateText()
+        
+        if count == 10 {
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
     }
     
     @IBAction func onResetTapped(sender: AnyObject) {

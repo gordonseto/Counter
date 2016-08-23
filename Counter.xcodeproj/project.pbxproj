@@ -13,9 +13,13 @@
 		8E750D0F1D6A102D00DF6F72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E750D0E1D6A102D00DF6F72 /* Assets.xcassets */; };
 		8E750D121D6A102D00DF6F72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E750D101D6A102D00DF6F72 /* LaunchScreen.storyboard */; };
 		8E750D1A1D6A19FF00DF6F72 /* CounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E750D191D6A19FF00DF6F72 /* CounterButton.swift */; };
+		8E9FE3631D6BDB8D004B1FD9 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FE3621D6BDB8D004B1FD9 /* FirstViewController.swift */; };
+		AEE8F3406A56B54F16EAFABD /* Pods_Counter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04E2B9EDB7FA56A18F89BC18 /* Pods_Counter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04E2B9EDB7FA56A18F89BC18 /* Pods_Counter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Counter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2AF23E46D67F3A0708C651D0 /* Pods-Counter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Counter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Counter/Pods-Counter.debug.xcconfig"; sourceTree = "<group>"; };
 		8E750D041D6A102C00DF6F72 /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E750D071D6A102D00DF6F72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E750D091D6A102D00DF6F72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		8E750D111D6A102D00DF6F72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E750D131D6A102D00DF6F72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E750D191D6A19FF00DF6F72 /* CounterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CounterButton.swift; sourceTree = "<group>"; };
+		8E9FE3621D6BDB8D004B1FD9 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		F662E1052D8255C1C19E9B48 /* Pods-Counter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Counter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Counter/Pods-Counter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEE8F3406A56B54F16EAFABD /* Pods_Counter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1810196ADF761A4DC343707A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2AF23E46D67F3A0708C651D0 /* Pods-Counter.debug.xcconfig */,
+				F662E1052D8255C1C19E9B48 /* Pods-Counter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8E750CFB1D6A102C00DF6F72 = {
 			isa = PBXGroup;
 			children = (
 				8E750D061D6A102D00DF6F72 /* Counter */,
 				8E750D051D6A102C00DF6F72 /* Products */,
+				1810196ADF761A4DC343707A /* Pods */,
+				E1C434AB792A63B5A753A047 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				8E750D071D6A102D00DF6F72 /* AppDelegate.swift */,
+				8E9FE3621D6BDB8D004B1FD9 /* FirstViewController.swift */,
 				8E750D091D6A102D00DF6F72 /* ViewController.swift */,
 				8E750D191D6A19FF00DF6F72 /* CounterButton.swift */,
 				8E750D0B1D6A102D00DF6F72 /* Main.storyboard */,
@@ -67,6 +86,14 @@
 			path = Counter;
 			sourceTree = "<group>";
 		};
+		E1C434AB792A63B5A753A047 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04E2B9EDB7FA56A18F89BC18 /* Pods_Counter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8E750D161D6A102D00DF6F72 /* Build configuration list for PBXNativeTarget "Counter" */;
 			buildPhases = (
+				797A5AC7EB6ACB0AEFE3E05C /* [CP] Check Pods Manifest.lock */,
 				8E750D001D6A102C00DF6F72 /* Sources */,
 				8E750D011D6A102C00DF6F72 /* Frameworks */,
 				8E750D021D6A102C00DF6F72 /* Resources */,
+				4C6F9A5BFC5885694D3BD7E5 /* [CP] Embed Pods Frameworks */,
+				7853BF58397DDFCCCACE7451 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,6 +163,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4C6F9A5BFC5885694D3BD7E5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Counter/Pods-Counter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7853BF58397DDFCCCACE7451 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Counter/Pods-Counter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		797A5AC7EB6ACB0AEFE3E05C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8E750D001D6A102C00DF6F72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -141,6 +219,7 @@
 				8E750D0A1D6A102D00DF6F72 /* ViewController.swift in Sources */,
 				8E750D1A1D6A19FF00DF6F72 /* CounterButton.swift in Sources */,
 				8E750D081D6A102D00DF6F72 /* AppDelegate.swift in Sources */,
+				8E9FE3631D6BDB8D004B1FD9 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +330,7 @@
 		};
 		8E750D171D6A102D00DF6F72 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2AF23E46D67F3A0708C651D0 /* Pods-Counter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Counter/Info.plist;
@@ -262,6 +342,7 @@
 		};
 		8E750D181D6A102D00DF6F72 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F662E1052D8255C1C19E9B48 /* Pods-Counter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Counter/Info.plist;
@@ -290,6 +371,7 @@
 				8E750D181D6A102D00DF6F72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
